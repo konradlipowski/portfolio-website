@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-size-sm: clamp(0.85rem, 0.42vw + 0.75rem, 1.08rem);
+  --font-size-base: clamp(1.06rem, 0.68vw + 0.89rem, 1.44rem);
+  --font-size-md: clamp(1.33rem, 1.07vw + 1.06rem, 1.92rem);
+  --font-size-lg: clamp(1.66rem, 1.63vw + 1.25rem, 2.55rem);
+  --font-size-xl: clamp(2.08rem, 2.42vw + 1.47rem, 3.4rem);
+  --font-size-xxl: clamp(2.59rem, 3.54vw + 1.71rem, 4.54rem);
+  --font-size-xxxl: clamp(3.24rem, 5.1vw + 1.97rem, 6.05rem);
+}
+
+body {
+  background-color: #171717;
+  font-family: "Oswald", sans-serif;
+  color: #fafafa;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.primary-heading {
+  color: #fafafa;
+  font-weight: 600;
+  font-size: var(--font-size-xxxl);
+}
+
+.secondary-heading {
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fafafa;
+  font-size: var(--font-size-xxxl);
+  font-style: italic;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1vh 2vh;
+  height: 6vh;
+}
+nav a {
+  color: currentColor;
+  text-transform: uppercase;
+  text-decoration: unset;
+  font-size: var(--font-size-base);
+}
+nav figure {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+nav figure img {
+  height: 5vh;
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav span {
+  display: flex;
+  gap: 2vh;
+}
+
+header {
+  height: 100vh;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+  position: relative;
+}
+header .header-buttons__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.link {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  font-size: var(--font-size-base);
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  word-spacing: 0.3em;
+  text-decoration: none;
+}
+.link__svg {
+  width: 100%;
+  height: auto;
+  transform-box: fill-box;
+  fill: #fafafa;
+  stroke: #fafafa;
+  stroke-width: 0.05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(90deg);
+}
+.link__arrow {
+  transform-origin: 50% 50%;
+  transition: transform 0.15s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.link:hover .link__arrow {
+  transform: scale(1.1);
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.link__arrow {
+  stroke-width: 0.075em;
+}
+.link__text {
+  animation: rotateReverse normal infinite 30s linear;
+  transform-origin: 50% 50%;
+}
+.link:hover .link__text {
+  animation-play-state: paused;
+}
+
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  padding: 32px;
+  position: relative;
+  letter-spacing: 1px;
+}
+.btn__circle, .btn__text, .btn__white-circle {
+  position: absolute;
+}
+.btn__circle {
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 100%;
+  width: 100%;
+  box-shadow: 0 0 1px 1px #fff;
+  transition: 0.3s linear;
+}
+.btn__white-circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background: #ffffff;
+  display: flex;
+  transition: 0.3s ease-in-out;
+}
+.btn__white-circle svg {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+.btn__text {
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  z-index: 2;
+  padding: 24px 8px;
+  transition: 0.3s linear;
+}
+.btn:hover .btn__circle {
+  transform: scale(0);
+}
+.btn:hover .btn__white-circle {
+  transform: translate(-50%, -50%) scale(1);
+}
+.btn:hover .btn__text {
+  transform: translate(40px, -50%);
+}/*# sourceMappingURL=style.css.map */
