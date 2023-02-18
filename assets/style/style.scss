@@ -80,10 +80,10 @@ header {
 	line-height: 0.9;
 	position: relative;
 	.header-buttons__container {
+		margin-top: 5vh;
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		gap: 2vw;
 	}
 }
 
@@ -159,7 +159,6 @@ $bgColor: transparent;
 	padding: 32px;
 	position: relative;
 	letter-spacing: 1px;
-
 	&__circle,
 	&__text,
 	&__white-circle {

@@ -82,10 +82,10 @@ header {
   position: relative;
 }
 header .header-buttons__container {
+  margin-top: 5vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 2vw;
 }
 
 .link {
