@@ -39,6 +39,23 @@
     --font-size-xxxl: clamp(5.25rem, calc(3rem + 11.4vw), 25.96rem);
   }
 }
+@media (width < 1000px) {
+  :root {
+    --font-size-extrasuperultrasmall: clamp(0.36rem, calc(0.26rem + 0.3vw), 0.9rem);
+    --font-size-omegasmall: clamp(0.42rem, calc(0.33rem + 0.42vw), 1.2rem);
+    --font-size-ultrasmall: clamp(0.5rem, calc(0.39rem + 0.54vw), 1.5rem);
+    --font-size-xxxs: clamp(0.6rem, calc(0.47rem + 0.69vw), 1.87rem);
+    --font-size-xxs: clamp(0.72rem, calc(0.55rem + 0.88vw), 2.34rem);
+    --font-size-xs: clamp(0.87rem, calc(0.64rem + 1.12vw), 2.92rem);
+    --font-size-sm: clamp(1.04rem, calc(0.76rem + 1.42vw), 3.65rem);
+    --font-size-base: clamp(1.5rem, calc(1.04rem + 2.29vw), 5.7rem);
+    --font-size-md: clamp(2.16rem, calc(1.42rem + 3.68vw), 8.91rem);
+    --font-size-lg: clamp(2.59rem, calc(1.66rem + 4.66vw), 11.14rem);
+    --font-size-xl: clamp(3.11rem, calc(1.93rem + 5.89vw), 13.92rem);
+    --font-size-xxl: clamp(3.73rem, calc(2.24rem + 7.45vw), 17.4rem);
+    --font-size-xxxl: clamp(4.48rem, calc(2.6rem + 9.42vw), 21.76rem);
+  }
+}
 
 body {
   background-color: #171717;
@@ -138,9 +155,11 @@ body {
   color: #fafafa;
   font-weight: 600;
   font-size: var(--font-size-xl);
+  text-align: center;
 }
 
 .secondary-heading {
+  text-align: center;
   font-weight: 600;
   color: transparent;
   -webkit-text-stroke-width: 0.5px;
@@ -176,6 +195,7 @@ nav a {
 }
 
 header {
+  margin: 1vmax;
   height: 100vh;
   text-transform: uppercase;
   display: flex;
@@ -195,6 +215,23 @@ header .header-buttons__container {
   justify-content: center;
 }
 
+@media (width < 1000px) {
+  .header-buttons__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh !important;
+  }
+  .primary-button a {
+    padding: 3vmin 5vmax;
+    font-size: var(--font-size-base);
+  }
+  header img {
+    height: 95vmim;
+  }
+  .link {
+    display: none;
+  }
+}
 .primary-button {
   position: relative;
   overflow: hidden;
