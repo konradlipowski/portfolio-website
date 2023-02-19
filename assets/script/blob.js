@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 })
 
-hamburgerMenu.addEventListener("click", function () {
-	const nav = document.querySelector("nav")
-	nav.classList.toggle("nav-open")
-})
+// hamburgerMenu.addEventListener("click", function () {
+// 	const nav = document.querySelector("nav")
+// 	nav.classList.toggle("nav-open")
+// })
 
 //Changing text
 var Messenger = function (el) {
@@ -123,5 +123,5 @@ var Messenger = function (el) {
 	m.init()
 }
 
-console.clear()
+// console.clear()
 var messenger = new Messenger(document.getElementById("header__changing-text"))
