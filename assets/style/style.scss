@@ -25,7 +25,7 @@
 	--font-size-xl: clamp(3.11rem, calc(1.93rem + 5.89vw), 13.92rem);
 	--font-size-xxl: clamp(3.73rem, calc(2.24rem + 7.45vw), 17.4rem);
 	--font-size-xxxl: clamp(4.48rem, calc(2.6rem + 9.42vw), 21.76rem);
-	@media (width > 2000px) {
+	@media (width > 2500px) {
 		--font-size-extrasuperultrasmall: clamp(0.42rem, calc(0.33rem + 0.42vw), 1.2rem);
 		--font-size-omegasmall: clamp(0.5rem, calc(0.39rem + 0.54vw), 1.5rem);
 		--font-size-ultrasmall: clamp(0.6rem, calc(0.47rem + 0.69vw), 1.87rem);
@@ -47,20 +47,6 @@ body {
 	font-family: "Oswald", sans-serif;
 	color: #fafafa;
 	user-select: none;
-}
-
-@keyframes rotate {
-	from {
-		rotate: 0deg;
-	}
-
-	50% {
-		scale: 1.2 1.1;
-	}
-
-	to {
-		rotate: 360deg;
-	}
 }
 
 // NAW
@@ -86,7 +72,7 @@ body {
 	z-index: 6;
 	display: block;
 	position: absolute;
-	height: 9px;
+	height: 5px;
 	width: 100%;
 	background: #fafafa;
 	border-radius: 9px;
@@ -108,11 +94,11 @@ body {
 
 #hamburger-menu span:nth-child(2),
 #hamburger-menu span:nth-child(3) {
-	top: 20px;
+	top: 18px;
 }
 
 #hamburger-menu span:nth-child(4) {
-	top: 40px;
+	top: 36px;
 }
 
 #hamburger-menu.open span:nth-child(1) {
@@ -141,9 +127,21 @@ body {
 	left: 50%;
 }
 // NAW
+@keyframes rotate {
+	from {
+		rotate: 0deg;
+	}
+
+	50% {
+		scale: 1.4;
+	}
+
+	to {
+		rotate: 360deg;
+	}
+}
 
 #background-blob {
-	// background-color: white;
 	height: 20vmax;
 	aspect-ratio: 1;
 	position: fixed;
@@ -151,17 +149,17 @@ body {
 	top: 50%;
 	translate: -50% -50%;
 	border-radius: 50%;
-	// background: linear-gradient(to right, #444444, #295bae);
-	animation: rotate 20s infinite;
-	opacity: 0.7;
-	filter: blur(50px);
+	background: linear-gradient(to right, #fff, #295bae);
+	animation: rotate 5s infinite;
+	opacity: 0.3;
+	filter: blur(80px);
 	z-index: -1;
 }
 
 .primary-heading {
 	color: #fafafa;
 	font-weight: 600;
-	font-size: var(--font-size-);
+	font-size: var(--font-size-xl);
 }
 .primary-text {
 }
@@ -170,7 +168,7 @@ body {
 	color: transparent;
 	-webkit-text-stroke-width: 0.5px;
 	-webkit-text-stroke-color: #fafafa;
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-lg);
 	font-style: italic;
 }
 .secondary-text {
@@ -207,15 +205,69 @@ header {
 	align-items: center;
 	line-height: 0.9;
 	position: relative;
+	img {
+		height: 50vmin;
+	}
 	.header-buttons__container {
 		margin-top: 5vh;
+		gap: 5vh;
 		width: 100%;
 		display: flex;
 		justify-content: center;
 	}
 }
+.primary-button {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
 
-// CHUJ
+.primary-button a {
+	position: relative;
+	transition: all 0.45s ease-in-out;
+}
+
+#primary-button__circle {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	background: #fafafa;
+	position: absolute;
+	transition: all 1s ease-Out;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.primary-button:hover #primary-button__circle {
+	width: 500%;
+	height: 500%;
+	opacity: 1;
+}
+
+.primary-button:hover a {
+	color: #171717;
+}
+.primary-button {
+	padding: 2vmin 4vmax;
+	border: 2px solid #fafafa;
+	margin: 20px 20px 20px 20px;
+	color: #bfc0c0;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: var(--font-size-xxs);
+	letter-spacing: 1.5px;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+a {
+	color: #fafafa;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
 $rotationDuration: 30s;
 $hoverDuration: 0.3s;
 
@@ -229,11 +281,11 @@ $bgColor: transparent;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	font-size: var(--font-size-xxxs);
+	font-size: 150%;
 	width: 20vmin;
 	aspect-ratio: 1;
 	text-transform: uppercase;
-	letter-spacing: 0.12em;
+	letter-spacing: 0.2em;
 	word-spacing: 0.2em;
 	text-decoration: none;
 
@@ -277,4 +329,8 @@ $bgColor: transparent;
 	to {
 		transform: rotate(-360deg);
 	}
+}
+footer {
+	position: relative;
+	height: 400px; /* set the height of your footer */
 }

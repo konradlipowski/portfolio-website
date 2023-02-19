@@ -6,11 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./assets/style/style.css" />
 		<link rel="shortcut icon" href="./assets/img/konradlipowskiAvatar.png" type="image/x-icon" />
-		<title>Konrad Lipowski</title>
+		<title>Konrad Lipowski - Frontend developer</title>
+		<meta
+			name="description"
+			content="Jestem doświadczonym frontend developerem. Przegląd moich projektów znajdziesz na moim portfolio. Skontaktuj się ze mną, by dowiedzieć się więcej."
+		/>
+		<meta name="keywords" content="frontend developer, portfolio, projektowanie stron internetowych, projektowanie aplikacji webowych" />
+		<meta property="og:title" content="Konrad Lipowski - Frontend Developer" />
+		<meta
+			property="og:description"
+			content="Jestem doświadczonym frontend developerem. Przegląd moich projektów znajdziesz na moim portfolio. Skontaktuj się ze mną, by dowiedzieć się więcej."
+		/>
+		<meta property="og:image" content="./assets/img/konradlipowskiAvatar.png" />
+		<meta property="og:url" content="https://konradlipowski.studio" />
 	</head>
 	<body>
 		<div id="background-blob"></div>
-		<nav>
+		<!-- <nav>
 			<a href="#">About me</a>
 			<a href="#">Resume</a>
 			<a href="#">Projects</a>
@@ -21,14 +33,23 @@
 			<span></span>
 			<span></span>
 			<span></span>
-		</div>
+		</div> -->
 		<header>
 			<figure>
 				<img src="./assets/img/konradlipowskiAvatar.png" alt="Konrad Lipowski zdjęcie" />
 			</figure>
 			<h1 class="primary-heading">Konrad Lipowski</h1>
-			<h2 class="secondary-heading">Frontend developer</h2>
-			<div class="header-buttons__container"></div>
+			<h2 class="secondary-heading" id="header__changing-text" data-value="Frontend developer">Frontend developer</h2>
+			<div class="header-buttons__container">
+				<div class="primary-button">
+					<div id="primary-button__circle"></div>
+					<a href="mailto:konradlipowski05@gmail.com">Contact me!</a>
+				</div>
+				<div class="primary-button">
+					<div id="primary-button__circle"></div>
+					<a href="https://github.com/konradlipowski">Github</a>
+				</div>
+			</div>
 			<a href="#" class="link">
 				<svg
 					viewBox="0 0 200 200"
@@ -46,8 +67,6 @@
 				</svg>
 			</a>
 		</header>
-		<main></main>
-		<div style="height: 1000px"></div>
 		<script src="./assets/script/blob.js"></script>
 	</body>
 </html>
